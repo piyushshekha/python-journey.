@@ -1,9 +1,11 @@
-def print_list(list,index=0):
-    if (index == len(list)):
-        return
-    print(list[index])
-    print(list,index+1)
-    
-bike = ["honda","re","kn","ns"]
-print_list(bike)
-    
+count = 0
+with open("prctice.txt","r") as f :
+     data = f.read()
+     print(data)
+     
+     nums = data.split(",")
+     for val in nums:
+         if int(val) % 2 == 0:
+             count += 1
+
+print(count)
