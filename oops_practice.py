@@ -17,24 +17,10 @@ print("model no :",s1.mod_det())
 class ElectricCar(Car):
     def charge(self):
         print(f"{self.name} is charging its battery!")
-
+        super().hello()
+        
 ev1 = ElectricCar("Tesla", "Model S")
 ev1.hello()   
 ev1.charge() 
 
 
-
-
-class Student:
-    def __init__(self,name,marks):
-        self.name = name
-        self.marks = marks
-        
-    def avg_cal(self):
-        total = 0
-        for val in self.marks:
-            total += val
-        print(self.name,"your avreg is :",total/len(self.marks))
-            
-s1 = Student("piyush", [79,87,99]) 
-s1.avg_cal()
